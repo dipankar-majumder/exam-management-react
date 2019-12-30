@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/exam-management/static/css/main.efbb4259.chunk.css",
-    "main.js": "/exam-management/static/js/main.b0980a26.chunk.js",
-    "main.js.map": "/exam-management/static/js/main.b0980a26.chunk.js.map",
-    "runtime-main.js": "/exam-management/static/js/runtime-main.5ebbd34f.js",
-    "runtime-main.js.map": "/exam-management/static/js/runtime-main.5ebbd34f.js.map",
-    "static/js/2.fe2b4170.chunk.js": "/exam-management/static/js/2.fe2b4170.chunk.js",
-    "static/js/2.fe2b4170.chunk.js.map": "/exam-management/static/js/2.fe2b4170.chunk.js.map",
-    "index.html": "/exam-management/index.html",
-    "precache-manifest.597b9532a798aa6f4fe638f480e1d103.js": "/exam-management/precache-manifest.597b9532a798aa6f4fe638f480e1d103.js",
-    "service-worker.js": "/exam-management/service-worker.js",
-    "static/css/main.efbb4259.chunk.css.map": "/exam-management/static/css/main.efbb4259.chunk.css.map",
-    "static/js/2.fe2b4170.chunk.js.LICENSE": "/exam-management/static/js/2.fe2b4170.chunk.js.LICENSE"
+    "main.css": "/exam-management-react/static/css/main.efbb4259.chunk.css",
+    "main.js": "/exam-management-react/static/js/main.2382be66.chunk.js",
+    "main.js.map": "/exam-management-react/static/js/main.2382be66.chunk.js.map",
+    "runtime-main.js": "/exam-management-react/static/js/runtime-main.ac0debf3.js",
+    "runtime-main.js.map": "/exam-management-react/static/js/runtime-main.ac0debf3.js.map",
+    "static/js/2.fe2b4170.chunk.js": "/exam-management-react/static/js/2.fe2b4170.chunk.js",
+    "static/js/2.fe2b4170.chunk.js.map": "/exam-management-react/static/js/2.fe2b4170.chunk.js.map",
+    "index.html": "/exam-management-react/index.html",
+    "precache-manifest.ac3473035ac72373288f281040ce317e.js": "/exam-management-react/precache-manifest.ac3473035ac72373288f281040ce317e.js",
+    "service-worker.js": "/exam-management-react/service-worker.js",
+    "static/css/main.efbb4259.chunk.css.map": "/exam-management-react/static/css/main.efbb4259.chunk.css.map",
+    "static/js/2.fe2b4170.chunk.js.LICENSE": "/exam-management-react/static/js/2.fe2b4170.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ebbd34f.js",
+    "static/js/runtime-main.ac0debf3.js",
     "static/js/2.fe2b4170.chunk.js",
     "static/css/main.efbb4259.chunk.css",
-    "static/js/main.b0980a26.chunk.js"
+    "static/js/main.2382be66.chunk.js"
   ]
 }
