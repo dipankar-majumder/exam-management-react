@@ -1,48 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Axios from 'axios';
 
-import { GET_EXAMS, EXAMS_LOADING, ADD_EXAM } from '../store/actions/types';
+import { GET_EXAMS, EXAMS_LOADING } from '../store/actions/types';
 import { setExamsLoading, getExams } from '../store/actions/examActions';
 
 import Exam from './Exam';
+import { changeAppBarTitle } from '../store/actions/stateActions';
 
 const Exams = () => {
   const dispatch = useDispatch();
   const { exams, isLoading } = useSelector(state => ({ ...state.examReducer }));
 
   useEffect(() => {
+    dispatch(changeAppBarTitle('Exams'));
     dispatch(getExams());
   }, []);
   const [examName, setExamName] = useState('');
   return (
     <div className='Exams'>
       <div>Exams</div>
-      <div>
-        <input
-          type='text'
-          placeholder='Exam Name'
-          value={examName}
-          onChange={event => {
-            event.preventDefault();
-            setExamName(event.target.value);
-          }}
-          onKeyPress={event => {
-            if (event.key === 'Enter') {
-              dispatch({ type: ADD_EXAM, payload: { name: examName } });
-              setExamName('');
-            }
-          }}
-        />
-        <input
-          type='button'
-          value='Add Exam'
-          onClick={() => {
-            dispatch({ type: ADD_EXAM, payload: { name: examName } });
-            setExamName('');
-          }}
-        />
-      </div>
       {isLoading ? (
         <div>Loading...</div>
       ) : (

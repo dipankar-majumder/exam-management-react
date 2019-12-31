@@ -1,5 +1,5 @@
-import { CHANGE_APPBARTITLE } from './types';
+import { CHANGE_APPBAR_TITLE } from './types';
 
 export const changeAppBarTitle = appBarTitle => {
-  return { type: CHANGE_APPBARTITLE, payload: appBarTitle };
+  return { type: CHANGE_APPBAR_TITLE, payload: appBarTitle };
 };

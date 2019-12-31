@@ -1,4 +1,4 @@
-import { CHANGE_APPBARTITLE } from '../actions/types';
+import { CHANGE_APPBAR_TITLE } from '../actions/types';
 
 const initialState = {
   appBarTitle: '',
@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_APPBARTITLE:
+    case CHANGE_APPBAR_TITLE:
       return {
         ...state,
         appBarTitle: action.payload,

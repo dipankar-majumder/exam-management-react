@@ -3,7 +3,10 @@ import Axios from 'axios';
 
 export default (
   state = {
-    teachers: [],
+    teachers: [
+      { id: 0, email: 'teacher0@email.com' },
+      { id: 1, email: 'teacher1@email.com' },
+    ],
     isLoading: false,
   },
   action,

@@ -4,7 +4,7 @@ export const DELETE_ITEM = 'DELETE_ITEM';
 export const ITEMS_LOADING = 'ITEMS_LOADING';
 
 // State's Type
-export const CHANGE_APPBARTITLE = 'CHANGE_APPBARTITLE';
+export const CHANGE_APPBAR_TITLE = 'CHANGE_APPBAR_TITLE';
 
 // Teacher's Type
 export const TEACHERS_LOADING = 'TEACHERS_LOADING';

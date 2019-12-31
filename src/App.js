@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import './App.css';
+// import './App.css';
 
 // import logo from './logo.svg';
 
@@ -26,7 +26,6 @@ import Admin from './components/Admin';
 
 const App = props => {
   // eslint-disable-next-line
-  const [state, setState] = useState({});
   return (
     <div className='App'>
       {/* <header className='App-header'>
