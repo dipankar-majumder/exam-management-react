@@ -234,19 +234,19 @@ export default () => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth='lg' className={classes.container}>
-          <Grid container spacing={3}>
-            <Switch>
-              <Route path={`${url}/dashboard`}>
-                <Dashboard />
-              </Route>
-              <Route path={`${url}/exams`}>
-                <Exams />
-              </Route>
-              <Route path={`${url}/teachers`}>
-                <Teachers />
-              </Route>
-            </Switch>
-          </Grid>
+          {/* <Grid container spacing={3}> */}
+          <Switch>
+            <Route path={`${url}/dashboard`}>
+              <Dashboard />
+            </Route>
+            <Route path={`${url}/exams`}>
+              <Exams />
+            </Route>
+            <Route path={`${url}/teachers`}>
+              <Teachers />
+            </Route>
+          </Switch>
+          {/* </Grid> */}
           {/* <Box pt={4}>
             <Copyright />
           </Box> */}

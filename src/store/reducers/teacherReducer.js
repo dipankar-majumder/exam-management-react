@@ -3,11 +3,9 @@ import Axios from 'axios';
 
 export default (
   state = {
-    teachers: [
-      { id: 0, email: 'teacher0@email.com' },
-      { id: 1, email: 'teacher1@email.com' },
-    ],
+    teachers: [],
     isLoading: false,
+    isLoadingFailed: false,
   },
   action,
 ) => {
@@ -17,9 +15,22 @@ export default (
     case GET_TEACHERS:
       Axios.get('http://localhost:5000/teachers')
         .then(res => {
-          return { ...state, teachers: res.data.teachers };
+          console.log(res.data);
+          return {
+            ...state,
+            teachers: res.data,
+            isLoading: false,
+          };
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+          console.log(err);
+          return {
+            ...state,
+            teachers: [],
+            isLoading: false,
+            isLoadingFailed: true,
+          };
+        });
     default:
       return { ...state };
   }
