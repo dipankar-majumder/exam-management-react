@@ -1,5 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Axios from 'axios';
 
 import { Grid, Box } from '@material-ui/core';
 
@@ -7,6 +8,7 @@ import { changeAppBarTitle } from '../store/actions/stateActions';
 import {
   setTeachersLoading,
   getTeachers,
+  setTeachersLoadingFailed,
 } from '../store/actions/teacherActions';
 import StickyHeadTable from './Material-UI/StickyHeadTable';
 
@@ -18,7 +20,15 @@ const Teachers = () => {
   useEffect(() => {
     dispatch(changeAppBarTitle('Teachers'));
     dispatch(setTeachersLoading());
-    dispatch(getTeachers());
+    Axios.get('http://localhost:5000/teachers')
+      .then(res => {
+        console.log(res.data);
+        dispatch(getTeachers(res.data));
+      })
+      .catch(err => {
+        console.error(err);
+        dispatch(setTeachersLoadingFailed());
+      });
   }, []);
   return (
     <Grid container alignContent='center' alignItems='center'>
@@ -37,6 +47,7 @@ const Teachers = () => {
                   { id: 'firstName', label: 'First Name' },
                   { id: 'lastName', label: 'Last Name' },
                   { id: 'email', label: 'Email' },
+                  { id: 'phone', label: 'Phone' },
                 ]}
               />
             )}

@@ -8,6 +8,7 @@ export const CHANGE_APPBAR_TITLE = 'CHANGE_APPBAR_TITLE';
 
 // Teacher's Type
 export const TEACHERS_LOADING = 'TEACHERS_LOADING';
+export const TEACHERS_LOADING_FAILED = 'TEACHERS_LOADING_FAILED';
 export const GET_TEACHERS = 'GET_TEACHERS';
 
 // Exam's Type
