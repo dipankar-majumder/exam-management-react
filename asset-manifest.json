@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/exam-management-react/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/exam-management-react/static/js/main.f6d4054f.chunk.js",
-    "main.js.map": "/exam-management-react/static/js/main.f6d4054f.chunk.js.map",
+    "main.js": "/exam-management-react/static/js/main.0151618b.chunk.js",
+    "main.js.map": "/exam-management-react/static/js/main.0151618b.chunk.js.map",
     "runtime-main.js": "/exam-management-react/static/js/runtime-main.ac0debf3.js",
     "runtime-main.js.map": "/exam-management-react/static/js/runtime-main.ac0debf3.js.map",
-    "static/js/2.19cfb9d0.chunk.js": "/exam-management-react/static/js/2.19cfb9d0.chunk.js",
-    "static/js/2.19cfb9d0.chunk.js.map": "/exam-management-react/static/js/2.19cfb9d0.chunk.js.map",
+    "static/js/2.bcb876c0.chunk.js": "/exam-management-react/static/js/2.bcb876c0.chunk.js",
+    "static/js/2.bcb876c0.chunk.js.map": "/exam-management-react/static/js/2.bcb876c0.chunk.js.map",
     "index.html": "/exam-management-react/index.html",
-    "precache-manifest.fb924c9f1a8b6868eb7fd26cdb5447eb.js": "/exam-management-react/precache-manifest.fb924c9f1a8b6868eb7fd26cdb5447eb.js",
+    "precache-manifest.84839ffd377672a3d6c707971030f074.js": "/exam-management-react/precache-manifest.84839ffd377672a3d6c707971030f074.js",
     "service-worker.js": "/exam-management-react/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/exam-management-react/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.19cfb9d0.chunk.js.LICENSE": "/exam-management-react/static/js/2.19cfb9d0.chunk.js.LICENSE"
+    "static/js/2.bcb876c0.chunk.js.LICENSE": "/exam-management-react/static/js/2.bcb876c0.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.ac0debf3.js",
-    "static/js/2.19cfb9d0.chunk.js",
+    "static/js/2.bcb876c0.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.f6d4054f.chunk.js"
+    "static/js/main.0151618b.chunk.js"
   ]
 }
