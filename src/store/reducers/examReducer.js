@@ -1,4 +1,8 @@
-import { GET_EXAMS, EXAMS_LOADING, ADD_EXAM } from '../actions/types';
+import {
+  GET_EXAMS,
+  EXAMS_LOADING,
+  EXAMS_LOADING_FAILED,
+} from '../actions/types';
 import Axios from 'axios';
 
 export default (
@@ -6,24 +10,22 @@ export default (
   state = {
     exams: [],
     isLoading: false,
+    isLoadingFailed: false,
   },
   action,
 ) => {
   switch (action.type) {
-    case GET_EXAMS:
-      Axios.get('http://localhost:5000/exams')
-        .then(res => {
-          return { ...state, exams: res.data.exams, isLoading: false };
-        })
-        .catch(err => console.log(err));
     case EXAMS_LOADING:
-      return { ...state, isLoading: true };
-    case ADD_EXAM:
-      const exam = {
-        ...action.payload,
-        id: Math.floor(Math.random() * Math.pow(10, 11)),
+      return { ...state, isLoading: true, isLoadingFailed: false };
+    case GET_EXAMS:
+      return {
+        ...state,
+        exams: action.payload,
+        isLoading: false,
+        isLoadingFailed: false,
       };
-      return { ...state, exams: [...state.exams, exam] };
+    case EXAMS_LOADING_FAILED:
+      return { ...state, isLoading: false, isLoadingFailed: true };
     default:
       return state;
   }

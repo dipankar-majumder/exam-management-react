@@ -13,6 +13,7 @@ export const GET_TEACHERS = 'GET_TEACHERS';
 
 // Exam's Type
 export const EXAMS_LOADING = 'EXAMS_LOADING';
+export const EXAMS_LOADING_FAILED = 'EXAMS_LOADING_FAILED';
 export const GET_EXAMS = 'GET_EXAMS';
 export const ADD_EXAM = 'ADD_EXAM';
 

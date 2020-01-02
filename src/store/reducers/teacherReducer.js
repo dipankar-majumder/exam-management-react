@@ -3,7 +3,6 @@ import {
   TEACHERS_LOADING,
   TEACHERS_LOADING_FAILED,
 } from '../actions/types';
-import Axios from 'axios';
 
 export default (
   state = {
