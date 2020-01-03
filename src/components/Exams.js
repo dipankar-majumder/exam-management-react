@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Axios from 'axios';
+import axios from 'axios';
 import MaterialTable from 'material-table';
 
-import { GET_EXAMS, EXAMS_LOADING } from '../store/actions/types';
 import {
   setExamsLoading,
   getExams,
   setExamsLoadingFailed,
+  addExam,
+  updateExam,
+  deleteExam,
 } from '../store/actions/examActions';
 
 import Exam from './Exam';
@@ -23,7 +25,8 @@ const Exams = () => {
   useEffect(() => {
     dispatch(changeAppBarTitle('Exams'));
     dispatch(setExamsLoading());
-    Axios.get('http://localhost:5000/exams')
+    axios
+      .get('http://localhost:5000/exams')
       .then(res => {
         console.log(res.data);
         dispatch(getExams(res.data));
@@ -33,19 +36,49 @@ const Exams = () => {
         dispatch(setExamsLoadingFailed());
       });
   }, []);
-  const [examName, setExamName] = useState('');
   return (
     <div className='Exams'>
       <MaterialTable
         title='Exams'
         columns={[
-          { title: 'ID', field: 'id' },
+          // { title: 'ID', field: 'id' },
           { title: 'Name', field: 'name' },
         ]}
         data={[...exams]}
+        editable={{
+          onRowAdd: newData => {
+            console.log('[onRowAdd(newData)] -> ', newData);
+            return axios
+              .post('http://localhost:5000/exams', { ...newData })
+              .then(res => dispatch(addExam(res.data)))
+              .catch(err => console.log(err));
+          },
+          onRowUpdate: (newData, oldData) => {
+            console.log(
+              '[onRowUpdate(newData, oldData)] -> ',
+              newData,
+              oldData,
+            );
+            return axios
+              .patch(`http://localhost:5000/exams/${oldData.id}`, {
+                ...newData,
+              })
+              .then(res => dispatch(updateExam(res.data)))
+              .catch();
+            return new Promise((resolve, reject) => {
+              resolve();
+            });
+          },
+          onRowDelete: oldData => {
+            console.log('[onRowDelete(oldData)] -> ', oldData);
+            return axios
+              .delete(`http://localhost:5000/exams/${oldData.id}`)
+              .then(res => dispatch(deleteExam(oldData.id)))
+              .catch(err => console.log(err));
+          },
+        }}
       />
-      <MaterialTableDemo />
-      <div>Exams</div>
+      {/* <div>Exams</div> */}
     </div>
   );
 };

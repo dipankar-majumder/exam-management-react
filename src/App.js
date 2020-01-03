@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // import './App.css';
@@ -13,19 +8,14 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-import {
-  Home,
-  Login,
-  PageNotFound,
-  Dashboard,
-  fakeAuth,
-  PrivateRoute,
-  LogIn,
-} from './components';
+import Home from './components/Home';
+import PageNotFound from './components/PageNotFound';
 import Admin from './components/Admin';
 
 const App = props => {
-  // eslint-disable-next-line
+  useEffect(() => {
+    document.title = props.title;
+  }, [props.title]);
   return (
     <div className='App'>
       {/* <header className='App-header'>

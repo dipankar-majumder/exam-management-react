@@ -16,6 +16,8 @@ export const EXAMS_LOADING = 'EXAMS_LOADING';
 export const EXAMS_LOADING_FAILED = 'EXAMS_LOADING_FAILED';
 export const GET_EXAMS = 'GET_EXAMS';
 export const ADD_EXAM = 'ADD_EXAM';
+export const UPDATE_EXAM = 'UPDATE_EXAM';
+export const DELETE_EXAM = 'DELETE_EXAM';
 
 export const USER_LOADING = 'USER_LOADING';
 export const USER_LOADED = 'USER_LOADED';

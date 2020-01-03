@@ -5,6 +5,7 @@ import {
 } from '../actions/types';
 
 export default (
+  // Initial State
   state = {
     teachers: [],
     isLoading: false,

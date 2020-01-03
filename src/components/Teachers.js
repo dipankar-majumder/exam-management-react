@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Axios from 'axios';
+import axios from 'axios';
 
 import MaterialTable from 'material-table';
 import {
@@ -29,7 +29,8 @@ const Teachers = () => {
   useEffect(() => {
     dispatch(changeAppBarTitle('Teachers'));
     dispatch(setTeachersLoading());
-    Axios.get('http://localhost:5000/teachers')
+    axios
+      .get('http://localhost:5000/teachers')
       .then(res => {
         console.log(res.data);
         dispatch(getTeachers(res.data));

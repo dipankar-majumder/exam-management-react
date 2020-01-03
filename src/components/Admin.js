@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   useRouteMatch,
   Switch,
   Link,
-  Route,
-  Redirect,
+  Route, // eslint-disable-next-line
+  Redirect, // eslint-disable-next-line
   useHistory,
 } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+// import { mainListItems, secondaryListItems } from './listItems';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -38,8 +38,8 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 // Custom Files
 import Exams from './Exams';
 import Teachers from './Teachers';
-import { changeAppBarTitle } from '../store/actions/stateActions';
 import Dashboard from './Dashboard';
+import { changeAppBarTitle } from '../store/actions/stateActions';
 
 // function Copyright() {
 //   return (
