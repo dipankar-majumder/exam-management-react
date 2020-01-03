@@ -65,9 +65,6 @@ const Exams = () => {
               })
               .then(res => dispatch(updateExam(res.data)))
               .catch();
-            return new Promise((resolve, reject) => {
-              resolve();
-            });
           },
           onRowDelete: oldData => {
             console.log('[onRowDelete(oldData)] -> ', oldData);
@@ -78,7 +75,6 @@ const Exams = () => {
           },
         }}
       />
-      {/* <div>Exams</div> */}
     </div>
   );
 };
