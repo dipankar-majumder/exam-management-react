@@ -40,10 +40,7 @@ const Exams = () => {
     <div className='Exams'>
       <MaterialTable
         title='Exams'
-        columns={[
-          // { title: 'ID', field: 'id' },
-          { title: 'Name', field: 'name' },
-        ]}
+        columns={[{ title: 'Name', field: 'name' }]}
         data={[...exams]}
         editable={{
           onRowAdd: newData => {
