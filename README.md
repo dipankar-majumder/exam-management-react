@@ -27,6 +27,8 @@ This project uses a number of open source projects to work properly:
 
 - NodeJS
 
+###### Commands:
+
 ```sh
 $ git clone https://github.com/dipankar-majumder/exam-management-react.git
 $ cd ./exam-management-react
